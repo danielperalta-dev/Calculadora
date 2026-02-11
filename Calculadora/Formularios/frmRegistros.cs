@@ -34,7 +34,29 @@ namespace Calculadora.Formularios
             {
                 dgvPersonas.DataSource = null;
                 dgvPersonas.DataSource = persona;
+                verificarRegistros();
             }
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void verificarRegistros()
+        {
+            if (persona.Count == 0)
+                button1.Enabled = false;
+            else
+                btnEliminar.Enabled = true;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            persona.RemoveAt(dgvPersonas.CurrentRow.Index);
+            dgvPersonas.DataSource = null; //Limpiar el datasource para que se refresque 
+            dgvPersonas.DataSource = persona; // Volver a asignar el datasource para mostrar
+            verificarRegistros();
         }
     }
 }
