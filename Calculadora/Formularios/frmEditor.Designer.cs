@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             statusStrip1 = new StatusStrip();
+            tssEstatus = new ToolStripStatusLabel();
             rtbEditor = new RichTextBox();
             mnsEditor = new MenuStrip();
             editorToolStripMenuItem = new ToolStripMenuItem();
@@ -40,24 +41,34 @@
             salirToolStripMenuItem = new ToolStripMenuItem();
             opfEditor = new OpenFileDialog();
             svfEditor = new SaveFileDialog();
+            statusStrip1.SuspendLayout();
             mnsEditor.SuspendLayout();
             SuspendLayout();
             // 
             // statusStrip1
             // 
+            statusStrip1.Items.AddRange(new ToolStripItem[] { tssEstatus });
             statusStrip1.Location = new Point(0, 428);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(800, 22);
             statusStrip1.TabIndex = 0;
             statusStrip1.Text = "statusStrip1";
             // 
+            // tssEstatus
+            // 
+            tssEstatus.Name = "tssEstatus";
+            tssEstatus.Size = new Size(58, 17);
+            tssEstatus.Text = "tssEstatus";
+            tssEstatus.Click += tssEstatus_Click;
+            // 
             // rtbEditor
             // 
             rtbEditor.Location = new Point(0, 27);
             rtbEditor.Name = "rtbEditor";
-            rtbEditor.Size = new Size(800, 373);
+            rtbEditor.Size = new Size(800, 383);
             rtbEditor.TabIndex = 1;
             rtbEditor.Text = "";
+            rtbEditor.TextChanged += rtbEditor_TextChanged;
             // 
             // mnsEditor
             // 
@@ -78,40 +89,40 @@
             // nuevoToolStripMenuItem
             // 
             nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            nuevoToolStripMenuItem.Size = new Size(180, 22);
+            nuevoToolStripMenuItem.Size = new Size(150, 22);
             nuevoToolStripMenuItem.Text = "Nuevo";
             nuevoToolStripMenuItem.Click += nuevoToolStripMenuItem_Click;
             // 
             // abrirToolStripMenuItem
             // 
             abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            abrirToolStripMenuItem.Size = new Size(180, 22);
+            abrirToolStripMenuItem.Size = new Size(150, 22);
             abrirToolStripMenuItem.Text = "Abrir";
             abrirToolStripMenuItem.Click += abrirToolStripMenuItem_Click;
             // 
             // guardarToolStripMenuItem
             // 
             guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            guardarToolStripMenuItem.Size = new Size(180, 22);
+            guardarToolStripMenuItem.Size = new Size(150, 22);
             guardarToolStripMenuItem.Text = "Guardar";
             guardarToolStripMenuItem.Click += guardarToolStripMenuItem_Click;
             // 
             // guardarComoToolStripMenuItem
             // 
             guardarComoToolStripMenuItem.Name = "guardarComoToolStripMenuItem";
-            guardarComoToolStripMenuItem.Size = new Size(180, 22);
+            guardarComoToolStripMenuItem.Size = new Size(150, 22);
             guardarComoToolStripMenuItem.Text = "Guardar como";
             guardarComoToolStripMenuItem.Click += guardarComoToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(147, 6);
             // 
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(180, 22);
+            salirToolStripMenuItem.Size = new Size(150, 22);
             salirToolStripMenuItem.Text = "Salir";
             // 
             // opfEditor
@@ -133,6 +144,8 @@
             MainMenuStrip = mnsEditor;
             Name = "frmEditor";
             Text = "Editor de texto";
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             mnsEditor.ResumeLayout(false);
             mnsEditor.PerformLayout();
             ResumeLayout(false);
@@ -153,5 +166,6 @@
         private ToolStripMenuItem salirToolStripMenuItem;
         private OpenFileDialog opfEditor;
         private SaveFileDialog svfEditor;
+        private ToolStripStatusLabel tssEstatus;
     }
 }
