@@ -40,6 +40,7 @@
             relojToolStripMenuItem = new ToolStripMenuItem();
             editorDeTextoToolStripMenuItem = new ToolStripMenuItem();
             contadorToolStripMenuItem = new ToolStripMenuItem();
+            xmlToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, menuToolStripMenuItem, temporizadoresToolStripMenuItem, editorDeTextoToolStripMenuItem, contadorToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, menuToolStripMenuItem, temporizadoresToolStripMenuItem, editorDeTextoToolStripMenuItem, contadorToolStripMenuItem, xmlToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(86, 20);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -130,6 +131,13 @@
             contadorToolStripMenuItem.Text = "Contador";
             contadorToolStripMenuItem.Click += contadorToolStripMenuItem_Click;
             // 
+            // xmlToolStripMenuItem
+            // 
+            xmlToolStripMenuItem.Name = "xmlToolStripMenuItem";
+            xmlToolStripMenuItem.Size = new Size(180, 22);
+            xmlToolStripMenuItem.Text = "Xml";
+            xmlToolStripMenuItem.Click += xmlToolStripMenuItem_Click;
+            // 
             // frmMenus
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -159,5 +167,6 @@
         private ToolStripMenuItem relojToolStripMenuItem;
         private ToolStripMenuItem editorDeTextoToolStripMenuItem;
         private ToolStripMenuItem contadorToolStripMenuItem;
+        private ToolStripMenuItem xmlToolStripMenuItem;
     }
 }
